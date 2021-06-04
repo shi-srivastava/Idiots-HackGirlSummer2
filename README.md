@@ -6,6 +6,7 @@
 * Memorybook FrontEnd (**Shivakshi+Nisha**)
 * Clicking Pictures (**Shivakshi**)
 Hello I made a change. 
-###Contributers:
-[x] Priyanshi 
-[x] Shivakshi
+
+### Contributers:
+    * Priyanshi 
+    * Shivakshi
