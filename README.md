@@ -8,5 +8,5 @@
 Hello I made a change. 
 
 ### Contributers:
-    * Priyanshi 
-    * Shivakshi
+    Priyanshi 
+    Shivakshi
