@@ -1,4 +1,4 @@
-# Virtual ScrapBook
+# Virtual MemoryBook
 ### What all to do
 * Login Page + Authentication (CockroachDB) (**Nishi + Priyanshi**)
 * Home Page (**Nisha**)
