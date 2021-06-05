@@ -121,7 +121,7 @@ function init() {
         }
 
         function setHeight() {
-            var ratio = video.videoWidth / video.videoHeight;
+            var ratio = 16/9;
             height = width / ratio;
             canvas.style.height = height + "px";
             canvas.height = height;
