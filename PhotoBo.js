@@ -2,15 +2,20 @@ var context;
 var width = 480; //Photo Size
 var height = 270;
 
-//this function is used to receive the image from the Flash Player, if Flash is used.
-function imageResult(data, videoWidth, videoHeight) {
-    videoWidth *= -1;
+//receive the image from the Flash Player, if Flash is used.
+function imageResult(data, videoWidth, videoHeight) 
+{   
+    video.style.cssText = "-moz-transform: scale(-1, 1); \
+-webkit-transform: scale(-1, 1); -o-transform: scale(-1, 1); \
+transform: scale(-1, 1); filter: FlipH;";
+    videoWidth;
     var imageData = "data:image/png;base64," + data;
     var image = new Image;
     image.onload = function () {
         context.drawImage(this, 0, 0);
     };
     image.src = imageData;
+    
 }
 
 document.addEventListener("DOMContentLoaded", init);
