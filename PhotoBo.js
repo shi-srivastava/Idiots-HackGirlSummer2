@@ -11,14 +11,13 @@ function imageResult(data, videoWidth, videoHeight)
     var image = new Image;
     image.onload = function () 
     {
-        -moz - transform: scaleX(-1);
+        /*-moz - transform: scaleX(-1);
         -o - transform: scaleX(-1);
-        -webkit - transform: scaleX(-1);
+        -webkit - transform: scaleX(-1);*/
         transform: scaleX(-1);
         context.drawImage(this, 0, 0);
     };
     image.src = imageData;
-    });
     
 }
 
