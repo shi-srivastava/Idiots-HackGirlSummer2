@@ -3,12 +3,15 @@ body
             
             
         } 
-        .Heading{
+        .Heading
+        {
             font-family: 'Stalemate', cursive;
             font-size: 10vh;
             display:block;
             font-weight: bold;
             font-style: italic;
+            text-shadow: 3px 3px 3px #6b6b6b;
+            font-stretch: expanded;
         }   
         .bg 
         {
