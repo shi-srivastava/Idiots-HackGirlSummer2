@@ -1,4 +1,3 @@
-<script src="PhotoBo.js"></script>
 body 
         {
             
@@ -6,8 +5,9 @@ body
         }    
         .bg 
         {
-            background-attachment:fixed; 
-            background-repeat: no-repeat;
+            background-image: url("https://source.unsplash.com/1600x900/?texture,pattern");
+            /*background-attachment:fixed; 
+            background-repeat: no-repeat;*/
             text-align: center;
             font-family: 'Roboto', sans-serif;
             width: 100%;
