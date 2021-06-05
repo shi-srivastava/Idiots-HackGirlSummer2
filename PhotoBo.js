@@ -73,9 +73,10 @@ function init() {
                 });
         }
         else {
-            canvas.style.height = height + "px";
-            canvas.height = height;
-
+            //canvas.style.height = height + "px";
+            //canvas.height = height;
+            canvas.style.height = 270 + "px";
+            canvas.height = 270;
             document.getElementById("buttonCapture").disabled = false;
             isFlash = true;
             video.style.display = "none";
