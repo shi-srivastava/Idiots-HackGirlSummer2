@@ -26,14 +26,12 @@ body
         {
             display: inline-block;
             line-height: 0;
-            margin: auto auto;
+            margin: 160 90;
             border: 12px rgb(0, 0, 0);
             border-style: groove;
             border-radius: 15px;
             box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
             position: relative;
-            height: 160;
-            width: 90;
             overflow: hidden;
             
         }    
