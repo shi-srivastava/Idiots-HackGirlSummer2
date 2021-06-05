@@ -75,7 +75,7 @@ function init() {
             var ratio = 9/16;
             height = width / ratio;
             canvas.style.height = height + "px";
-            canvas.height = height;'
+            canvas.height = height;
             document.getElementById("buttonCapture").disabled = false;
             isFlash = true;
             video.style.display = "none";
