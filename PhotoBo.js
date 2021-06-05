@@ -1,15 +1,10 @@
 var context;
-var width = 480; //Photo Size
+var width = 480;
 var height = 270;
-
-
 
 //receive the image from the Flash Player, if Flash is used.
 function imageResult(data, videoWidth, videoHeight) 
 {   
-    scaleX(-1);
-    videoHeight = 270;
-    videoWidth = 480;
     var imageData = "data:image/png;base64," + data;
     var image = new Image;
     image.onload = function () 
@@ -75,9 +70,12 @@ function init() {
                     }
                 });
         }
-        else {
+        else 
+        {
+            var ratio = 9/16;
+            height = width / ratio;
             canvas.style.height = height + "px";
-            canvas.height = height;
+            canvas.height = height;'
             document.getElementById("buttonCapture").disabled = false;
             isFlash = true;
             video.style.display = "none";
@@ -121,7 +119,7 @@ function init() {
         }
 
         function setHeight() {
-            var ratio = 16/9;
+            var ratio = 9/16;
             height = width / ratio;
             canvas.style.height = height + "px";
             canvas.height = height;
@@ -137,15 +135,18 @@ function init() {
                 document.getElementById("buttonCapture").innerHTML = "Retake";
                 if (isFlash) {
                     thisMovie("FlashWebcam").capture();
-                } else 
+                } 
+                else 
                 {
                     setHeight();
-                    context.drawImage(video, 480, 270, width, height);
-                } //Here
+                    context.drawImage(video, 0,0, width, height);
+                } 
 
                 document.getElementById("buttonSave").innerHTML = "Save";
                 document.getElementById("buttonSave").disabled = false;
-            } else {
+            } 
+            else 
+            {
                 makeCaptureButton();
             }
         }
