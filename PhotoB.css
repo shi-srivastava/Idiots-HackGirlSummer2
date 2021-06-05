@@ -5,9 +5,10 @@ body
         }    
         .bg 
         {
-            background-image: url("https://source.unsplash.com/1600x900/?flower,pattern");
+            background-image: url("https://source.unsplash.com/1600x900/?flower,white,pattern");
             /*background-attachment:fixed; 
             background-repeat: no-repeat;*/
+            background-position: top;
             text-align: center;
             font-family: 'Roboto', sans-serif;
             width: 100%;
@@ -25,12 +26,16 @@ body
         {
             display: inline-block;
             line-height: 0;
-            margin: 0 auto;
+            margin: auto auto;
             border: 12px rgb(0, 0, 0);
             border-style: groove;
             border-radius: 15px;
             box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
             position: relative;
+            height: 160;
+            width: 90;
+            overflow: hidden;
+            
         }    
         #video {
             float: left;
