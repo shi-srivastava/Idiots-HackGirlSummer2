@@ -6,16 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photobooth</title>
     <style>
-        body {
+        body 
+        {
             text-align: center;
             font-family: 'Roboto', sans-serif;
             width: 100%;
             height: 100%;
             overflow-x: hidden;
+            overflow-y: hidden;
         }    
         .content 
         {
-            display: block;
+            display:flexbox;
             width: 100%;
             height: 100%;
         }
@@ -24,7 +26,8 @@
             display: inline-block;
             line-height: 0;
             margin: 0 auto;
-            border: 10px #fff solid;
+            border: 12px rgb(0, 0, 0);
+            border-style: groove;
             border-radius: 15px;
             box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
             position: relative;
@@ -113,8 +116,8 @@
 
     <script>
         var context;
-        var width = 450; //set width of the video and image
-        var height = 300; //only used for the Flash fallback
+        var width = 450; //Photo Size
+        var height = 300; 
 
         //this function is used to receive the image from the Flash Player, if Flash is used.
         function imageResult(data, videoWidth, videoHeight) {
@@ -126,7 +129,6 @@
             image.src = imageData;
         }
 
-        //wait for the document to load and then initiate the application
         document.addEventListener("DOMContentLoaded", init);
 
         function init() {
@@ -152,17 +154,22 @@
             function startWebcam() {
                 navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mediaDevices || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
 
-                if (navigator.mediaDevices) {
-                    navigator.mediaDevices.getUserMedia({ video: true }, handleVideo, videoError).then(function (stream) {
+                if (navigator.mediaDevices) 
+                {
+                    navigator.mediaDevices.getUserMedia({ video: true }, handleVideo, videoError).then(function (stream) 
+                    {
                         video.onloadedmetadata = setHeight;
                         document.getElementById("buttonCapture").disabled = false;
                         return video.srcObject = stream;
-                    }).catch(function (e) {
+                    })
+                    .catch(function (e) 
+                    {
                         console.log(e.name + ": " + e.message);
 
                         document.getElementById("buttonCapture").disabled = true;
 
-                        switch (e.name) {
+                        switch (e.name) 
+                        {
                             case "NotAllowedError":
                                 document.getElementById("savedImages").innerHTML = "<h3>You can't use this app because you denied camera access. Refresh the page and allow the camera to be used by this app.</h3>";
                                 break;
@@ -174,7 +181,9 @@
                                 break;
                         }
                     });
-                } else {
+                } 
+                else 
+                {
                     canvas.style.height = height + "px";
                     canvas.height = height;
 
@@ -204,23 +213,28 @@
                     script.src = "fallback/swfobject.js";
                 }
 
-                function thisMovie(movieName) {
-                    if (navigator.appName.indexOf("Microsoft") != -1) {
+                function thisMovie(movieName) 
+                {
+                    if (navigator.appName.indexOf("Microsoft") != -1) 
+                    {
                         return window[movieName];
                     } else {
                         return document[movieName];
                     }
                 }
 
-                function handleVideo(stream) {
+                function handleVideo(stream) 
+                {
                     video.src = window.URL.createObjectURL(stream);
                 }
 
-                function videoError(e) {
+                function videoError(e) 
+                {
                     document.getElementById("savedImages").innerHTML = "<h3>" + e + "</h3>";
                 }
 
-                function setHeight() {
+                function setHeight() 
+                {
                     var ratio = video.videoWidth / video.videoHeight;
                     height = width / ratio;
                     canvas.style.height = height + "px";
