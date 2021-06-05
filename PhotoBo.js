@@ -17,7 +17,7 @@ function imageResult(data, videoWidth, videoHeight)
         /*-moz - transform: scaleX(-1);
         -o - transform: scaleX(-1);
         -webkit - transform: scaleX(-1);*/
-        context.drawImage(480, 270);
+        context.drawImage(data, 0,0);
     };
     image.src = imageData;
     
@@ -39,9 +39,12 @@ function init() {
 
     context = canvas.getContext("2d");
 
-    if ((isChrome || isSafari) && window.location.protocol == "http:") {
+    if ((isChrome || isSafari) && window.location.protocol == "http:") 
+    {
         document.getElementById("savedImages").innerHTML = "<h1>This browser only supports camera streams over https:</h1>";
-    } else {
+    } 
+    else 
+    {
         startWebcam();
     }
 
@@ -73,10 +76,8 @@ function init() {
                 });
         }
         else {
-            //canvas.style.height = height + "px";
-            //canvas.height = height;
-            canvas.style.height = 270 + "px";
-            canvas.height = 270;
+            canvas.style.height = height + "px";
+            canvas.height = height;
             document.getElementById("buttonCapture").disabled = false;
             isFlash = true;
             video.style.display = "none";
@@ -136,10 +137,11 @@ function init() {
                 document.getElementById("buttonCapture").innerHTML = "Retake";
                 if (isFlash) {
                     thisMovie("FlashWebcam").capture();
-                } else {
+                } else 
+                {
                     setHeight();
-                    context.drawImage(video, 0, 0, width, height);
-                }
+                    context.drawImage(video, 480, 270, width, height);
+                } //Here
 
                 document.getElementById("buttonSave").innerHTML = "Save";
                 document.getElementById("buttonSave").disabled = false;
