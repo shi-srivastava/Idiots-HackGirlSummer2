@@ -106,3 +106,9 @@ body
         #savedImages img {
             margin: 5px;
         }
+        .flipped-x {
+            -moz-transform: scaleX(-1);
+            -o-transform: scaleX(-1);
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+        }
