@@ -72,8 +72,7 @@ function init() {
         }
         else 
         {
-            var ratio = 9/16;
-            height = width / ratio;
+            height = width*9/16;
             canvas.style.height = height + "px";
             canvas.height = height;
             document.getElementById("buttonCapture").disabled = false;
@@ -119,8 +118,7 @@ function init() {
         }
 
         function setHeight() {
-            var ratio = 9/16;
-            height = width / ratio;
+            height = width*9/16;
             canvas.style.height = height + "px";
             canvas.height = height;
         }
