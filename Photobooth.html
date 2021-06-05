@@ -36,7 +36,9 @@
         var height = 300; 
 
         //this function is used to receive the image from the Flash Player, if Flash is used.
-        function imageResult(data, videoWidth, videoHeight) {
+        function imageResult(data, videoWidth, videoHeight) 
+        {
+            videoWidth*=-1;
             var imageData = "data:image/png;base64," + data;
             var image = new Image;
             image.onload = function () {
