@@ -13,6 +13,7 @@ function imageResult(data, videoWidth, videoHeight)
         -o - transform: scaleX(-1);
         -webkit - transform: scaleX(-1);*/
         context.drawImage(data, 0,0);
+        context.drawImage(10,10,160,90,0,0,480,270);
     };
     image.src = imageData;
     
