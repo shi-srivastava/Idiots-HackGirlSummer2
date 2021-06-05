@@ -8,7 +8,7 @@ var height = 270;
 function imageResult(data, videoWidth, videoHeight) 
 {   
     scaleX(-1);
-    outerHeight = 270;
+    videoHeight = 270;
     videoWidth = 480;
     var imageData = "data:image/png;base64," + data;
     var image = new Image;
