@@ -3,12 +3,15 @@
     padding: 0px;
     box-sizing: border-box;
 }
+body{
+  background-color: #f5f11d;
+}
 nav{
     display:flex;
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
-    background-color: #f9f9;
+    background-color: #f9f9f9;
     font-family: 'Dancing Script', cursive;
 }
 
@@ -32,15 +35,22 @@ nav{
     font-size: 20px;
 }
 button {
-    width: 130px;
-    height: 40px;
+    width: 120px;
+    height: 35px;
+    margin: 20px;
     line-height: 42px;
     padding: 0;
-    border-radius: 10px;
+    border-radius: 20px;
+    color: white;
     border: none;
-    background: rgb(233, 135, 168);
-  background: linear-gradient(0deg, rgb(160, 51, 88) 0%, rgba(160,51,88) 100%);
-  }
+    background: rgb(33, 88, 207);
+    background: linear-gradient(0deg, rgb(33, 88, 207) 0%, rgba(33,88,207) 100%);
+    cursor: pointer;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+     outline: none;
+}
   button:hover {
     color: #d48ca1;
     background: transparent;
@@ -100,6 +110,7 @@ button:hover {
   } */
 .burger{
     display:none;
+    cursor:pointer;
 }
 .burger div{
     width: 25px;
@@ -123,10 +134,33 @@ button:hover {
         right:0px;
         height:90vh;
         top:11.5vh;
-        background-color: #f9f9;
+        background-color: #f9f9f9;
         flex-direction: column;
         align-items: center;
+        width:50%;
+        transform:translateX(100%);
+        transition: transform 0.5s ease-in;
     }
+    .nav-links li{
+      opacity:100;
+    }
+    .burger{
+      display:block;
+    }
+}
+.nav-active{
+  transform:translateX(0%);
+}
+@keyframes navLinksFade{
+  from{
+       opacity: 0;
+       transform:translateX(50px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+
+  }
 }
     
 
