@@ -5,3 +5,11 @@
 * Storage of Pictures (**Nishi**)
 * Memorybook FrontEnd (**Shivakshi+Nisha**)
 * Clicking Pictures (**Shivakshi**)
+
+### Contributers:
+    Priyanshi 
+    Shivakshi
+    Nishi
+    Nisha
+
+
