@@ -1,6 +1,6 @@
 var context;
 var width = 480;
-var height = 270;
+var height = width*9/16;
 
 //receive the image from the Flash Player, if Flash is used.
 function imageResult(data, videoWidth, videoHeight) 
@@ -14,7 +14,6 @@ function imageResult(data, videoWidth, videoHeight)
         -o - transform: scaleX(-1);
         -webkit - transform: scaleX(-1);*/
         context.drawImage(data, 0,0);
-        context.drawImage(10,10,160,90,0,0,480,270);
     };
     image.src = imageData;
     
@@ -89,7 +88,7 @@ function init() {
                 var flashvars = {};
 
                 var parameters = {};
-                parameters.scale = "noscale";
+                parameters.scale = " ";//Here
                 parameters.wmode = "transparent";
                 parameters.allowFullScreen = "true";
                 parameters.allowScriptAccess = "always";
