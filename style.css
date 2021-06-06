@@ -26,7 +26,7 @@ nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 33%;
+    width: 55%;
 }
 .nav-links a{
     text-decoration: none;
@@ -43,8 +43,8 @@ button {
     border-radius: 20px;
     color: white;
     border: none;
-    background: rgb(33, 88, 207);
-    background: linear-gradient(0deg, rgb(33, 88, 207) 0%, rgba(33,88,207) 100%);
+    background: rgb(126, 240, 255);
+    background: linear-gradient(0deg, rgb(126, 240, 255) 0%, rgba(126,240,255) 100%);
     cursor: pointer;
     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
    7px 7px 20px 0px rgba(0,0,0,.1),
