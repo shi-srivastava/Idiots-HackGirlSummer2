@@ -12,12 +12,12 @@ body {
 }
 
 .main {
-    background-color: #FFFFFF;
+    background-color: #ffffff2a;
     width: 400px;
     height: 400px;
     margin: 7em auto;
     border-radius: 1.5em;
-    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+    box-shadow: -5px 11px 35px 5px rgba(0, 0, 0, 0.493);
 }
 
 .sign {
@@ -53,7 +53,7 @@ form.form1 {
 }
 
 .pass {
-        width: 76%;
+width: 76%;
 color: rgb(38, 50, 56);
 font-weight: 700;
 font-size: 14px;
@@ -74,11 +74,11 @@ font-family: 'Ubuntu', sans-serif;
 
 
 .un:focus, .pass:focus {
-    border: 2px solid rgba(0, 0, 0, 0.18) !important;
+    border: 2px solid rgba(255, 0, 0, 0.18) !important;
     
 }
 
-.submit {
+/*.submit {
   cursor: pointer;
     border-radius: 5em;
     color: #fff;
@@ -92,25 +92,92 @@ font-family: 'Ubuntu', sans-serif;
     margin-left: 35%;
     font-size: 13px;
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}*/
+.submit 
+{
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    width: 130px;
+    height: 40px;
+    color: #8C55AA;
+    font-weight: bold;;
+    border-radius: 5em;
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 35%;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    background-color: rgb(250, 235, 215);
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+}
+.submit span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.submit:hover{
+  background: transparent;
+  background: linear-gradient(to right, #d002eba6, #ec0ea998);
+  text-shadow:none;
+  transition: all 500ms ease;
+  color: #ffffff;
+  text-shadow: #d002eba6;
+  box-shadow:#fff;
+}
+.submit:hover:before {
+  transition: all 500ms ease;
+  height: 100%;
+}
+.submit:hover:after {
+  transition: all 500ms ease;
+  height: 100%;
+}
+.submit span:before,
+.submit span:after {
+  position: absolute;
+  content: "";
+  box-shadow:
+   -1px -1px 20px 0px rgba(255,255,255,1),
+   -4px -4px 5px 0px rgba(255,255,255,1),
+   7px 7px 20px 0px rgba(0,0,0,.4),
+   4px 4px 5px 0px rgba(0,0,0,.3);
+}
+.submit span:before {
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: .5px;
+  transition: all 500ms ease;
+}
+.submit span:after {
+  right: 0;
+  bottom: 0;
+  width: 0%;
+  height: .5px;
+  transition: all 500ms ease;
+}
+.submit span:hover:before {
+  width: 100%;
+}
+.submit span:hover:after {
+  width: 100%;
 }
 
-.forgot {
+.forgot 
+{    
     text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
-    color: #E1BEE7;
-    padding-top: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-.glass {
-    height: 100%;
-    width: 100%;
-    background-image: url('https://images.unsplash.com/photo-1528938102132-4a9276b8e320?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80 1500w');
-    background-size: cover;
-    background-position: center;
-    clip-path: inset(10em);
-    filter: blur(20px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 .drop-shadow {
     height: 100%;
     width: 100%;
@@ -140,9 +207,7 @@ font-family: 'Ubuntu', sans-serif;
     padding-left: 0.375em;
 }
 a {
-    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
-    color: #E1BEE7;
-    text-decoration: none
+    color: #1100ff;
 }
 @media (max-width: 980px) {
     .glass {
