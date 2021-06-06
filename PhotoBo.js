@@ -1,11 +1,12 @@
 var context;
-var width = 480;
-var height = width*9/16;
+var width = 480; //Photo Size
+var height = 270;
+
+
 
 //receive the image from the Flash Player, if Flash is used.
 function imageResult(data, videoWidth, videoHeight) 
 {   
-    videoHeight=videoWidth*9/16;
     var imageData = "data:image/png;base64," + data;
     var image = new Image;
     image.onload = function () 
@@ -13,7 +14,8 @@ function imageResult(data, videoWidth, videoHeight)
         /*-moz - transform: scaleX(-1);
         -o - transform: scaleX(-1);
         -webkit - transform: scaleX(-1);*/
-        context.drawImage(data, 0,0);
+        scaleX(-1);
+        context.drawImage(this, 0, 0);
     };
     image.src = imageData;
     
@@ -35,12 +37,9 @@ function init() {
 
     context = canvas.getContext("2d");
 
-    if ((isChrome || isSafari) && window.location.protocol == "http:") 
-    {
+    if ((isChrome || isSafari) && window.location.protocol == "http:") {
         document.getElementById("savedImages").innerHTML = "<h1>This browser only supports camera streams over https:</h1>";
-    } 
-    else 
-    {
+    } else {
         startWebcam();
     }
 
@@ -71,11 +70,10 @@ function init() {
                     }
                 });
         }
-        else 
-        {
-            height = width*9/16;
+        else {
             canvas.style.height = height + "px";
             canvas.height = height;
+
             document.getElementById("buttonCapture").disabled = false;
             isFlash = true;
             video.style.display = "none";
@@ -88,7 +86,7 @@ function init() {
                 var flashvars = {};
 
                 var parameters = {};
-                parameters.scale = " ";//Here
+                parameters.scale = "noscale";
                 parameters.wmode = "transparent";
                 parameters.allowFullScreen = "true";
                 parameters.allowScriptAccess = "always";
@@ -119,7 +117,8 @@ function init() {
         }
 
         function setHeight() {
-            height = width*9/16;
+            var ratio = video.videoWidth / video.videoHeight;
+            height = width / ratio;
             canvas.style.height = height + "px";
             canvas.height = height;
         }
@@ -134,18 +133,14 @@ function init() {
                 document.getElementById("buttonCapture").innerHTML = "Retake";
                 if (isFlash) {
                     thisMovie("FlashWebcam").capture();
-                } 
-                else 
-                {
+                } else {
                     setHeight();
-                    context.drawImage(video, 0,0, width, height);
-                } 
+                    context.drawImage(video, 0, 0, width, height);
+                }
 
                 document.getElementById("buttonSave").innerHTML = "Save";
                 document.getElementById("buttonSave").disabled = false;
-            } 
-            else 
-            {
+            } else {
                 makeCaptureButton();
             }
         }
