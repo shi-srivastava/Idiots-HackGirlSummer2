@@ -1,6 +1,16 @@
 *{
     margin:0px;
     padding: 0px;
+
+    box-sizing: border-box;
+}
+body{
+  background-color: #f5f11d;
+}
+nav{
+    display:flex;
+    justify-content: space-around;
+
     box-sizing:border-box;
 }
 body{
@@ -9,6 +19,7 @@ body{
 nav{
     display:flex;
     justify-content: space-evenly;
+
     align-items: center;
     min-height: 8vh;
     background-color: #f9f9f9;
@@ -31,7 +42,9 @@ nav{
 .nav-links a{
     text-decoration: none;
     letter-spacing: 3px;
+
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
     font-weight: bold;
     font-size: 20px;
 }
@@ -42,7 +55,11 @@ button {
     line-height: 42px;
     padding: 0;
     border-radius: 20px;
+
+    color: white;
+
     align-items: center;
+
     border: none;
     background: rgb(126, 240, 255);
     background: linear-gradient(0deg, rgb(126, 240, 255) 0%, rgba(126,240,255) 100%);
@@ -133,8 +150,13 @@ button:hover {
     {
         position:absolute;
         right:0px;
+
+        height:90vh;
+        top:11.5vh;
+
         height:92vh;
         top:8vh;
+
         background-color: #f9f9f9;
         flex-direction: column;
         align-items: center;
